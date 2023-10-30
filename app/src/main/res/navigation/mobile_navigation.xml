@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.android_e_commerce.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_cat_products"
+        android:name="com.example.android_e_commerce.ui.product.ProductFragment"
+        android:label="@string/menu_products_by_category"
+        tools:layout="@layout/fragment_products" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.android_e_commerce.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_product_management"
+        android:name="com.example.android_e_commerce.ui.management.ProductManagementFragment"
+        android:label="@string/menu_product_management"
+        tools:layout="@layout/fragment_product_management" />
 </navigation>

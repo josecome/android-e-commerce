@@ -1,4 +1,4 @@
-package com.example.android_e_commerce.ui.slideshow;
+package com.example.android_e_commerce.ui.product;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.android_e_commerce.databinding.FragmentSlideshowBinding;
+import com.example.android_e_commerce.databinding.FragmentProductsBinding;
 
-public class SlideshowFragment extends Fragment {
+public class ProductFragment extends Fragment {
 
-    private FragmentSlideshowBinding binding;
+    private FragmentProductsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SlideshowViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        ProductViewModel galleryViewModel =
+                new ViewModelProvider(this).get(ProductViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentProductsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSlideshow;
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textProducts;
+        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
